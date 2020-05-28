@@ -184,9 +184,8 @@ body {
 	display:none !important;
 }
 .slide{
-	width: auto !important;
 	width: 500px;
-	height: 120px;
+	height: 300px;
 	overflow: hidden;
 	position: relative;
 	margin: 0 auto;
@@ -203,18 +202,14 @@ body {
 }
 #back{
 	position: absolute;
-	top: 230px;
-	width: auto !important;
-	width: 50px;
+	top: 130px;
 	left: 0;
 	cursor: pointer;
 	z-index: 1;
 }
 #next{
 	position: absolute;
-	top: 230px;
-	width: auto !important;
-	width: 50px;
+	top: 130px;
 	right: 0;
 	cursor: pointer;
 	z-index: 1;
@@ -247,12 +242,12 @@ body {
 			-->
 		</div>
 		<div class="slide">
-	      		<img id="back" src="https://user-images.githubusercontent.com/66043576/83115419-4c959000-a105-11ea-9665-f1b61a7aa108.png" alt="" width="100">
+	      		<img id="back" src="https://user-images.githubusercontent.com/66043576/83115419-4c959000-a105-11ea-9665-f1b61a7aa108.png" alt="" width="50">
 	      		<ul>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" alt="" class="img100"></li>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098861-b2265400-a0e6-11ea-9be1-d5a46e23f7dc.JPG" alt="" class="img100"></li>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098862-b2beea80-a0e6-11ea-960e-5280b7d01ad4.JPG" alt="" class="img100"></li>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098892-bf434300-a0e6-11ea-88a1-5c166b3211c5.JPG" alt="" class="img100"></li>
+				<li><img src="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" alt="" width="500" height="300"></li>
+				<li><img src="https://user-images.githubusercontent.com/66043576/83098861-b2265400-a0e6-11ea-9be1-d5a46e23f7dc.JPG" alt="" width="500" height="300"></li>
+				<li><img src="https://user-images.githubusercontent.com/66043576/83098862-b2beea80-a0e6-11ea-960e-5280b7d01ad4.JPG" alt="" width="500" height="300"></li>
+				<li><img src="https://user-images.githubusercontent.com/66043576/83098892-bf434300-a0e6-11ea-88a1-5c166b3211c5.JPG" alt="" width="500" height="300"></li>
 	     		</ul>
 	      		<img id="next" src="https://user-images.githubusercontent.com/66043576/83115425-4dc6bd00-a105-11ea-8e7d-7b8e7a2919c4.png" alt="" width="100">
 	    	</div>
@@ -348,7 +343,7 @@ body {
 	      	function back() {
 			if(1<img_position){
 		  		imgs.animate({
-		    		left:'+=100px'
+		    		left:'+=500px'
 		  		});
 		  	img_position--;
 			}
@@ -356,7 +351,7 @@ body {
 	      	function next() {
 			if(img_count>img_position){
 				imgs.animate({
-				left:'-=100px'
+				left:'-=500px'
 				});
 			img_position++;
 			}
