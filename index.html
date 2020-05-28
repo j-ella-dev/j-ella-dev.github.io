@@ -184,14 +184,14 @@ body {
 	display:none !important;
 }
 .slide{
-	width: 500px;
-	height: 400px;
+	width: 400px;
+	'height: 400px;
 	overflow: hidden;
 	position: relative;
 	margin: 0 auto;
 }
 .slide ul{
-	width: 2000px;
+	width: 1600px;
 	position: absolute;
 	top:0;
 	left:0;
@@ -202,14 +202,14 @@ body {
 }
 #back{
 	position: absolute;
-	top: 180px;
+	top: 150px;
 	left: 0;
 	cursor: pointer;
 	z-index: 1;
 }
 #next{
 	position: absolute;
-	top: 180px;
+	top: 150px;
 	right: 0;
 	cursor: pointer;
 	z-index: 1;
@@ -229,30 +229,27 @@ body {
 			<div id="autoplay" style="display:none;">
 				<!-- //이미지 추가 -->
 				<!--<img src="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" class="img100" />
-				<<img src="https://user-images.githubusercontent.com/66043576/83098861-b2265400-a0e6-11ea-9be1-d5a46e23f7dc.JPG" class="img100" />
+				<img src="https://user-images.githubusercontent.com/66043576/83098861-b2265400-a0e6-11ea-9be1-d5a46e23f7dc.JPG" class="img100" />
 				<img src="https://user-images.githubusercontent.com/66043576/83098862-b2beea80-a0e6-11ea-960e-5280b7d01ad4.JPG" class="img100" />
 				<img src="https://user-images.githubusercontent.com/66043576/83098892-bf434300-a0e6-11ea-88a1-5c166b3211c5.JPG" class="img100" />
 				-->
 			</div>
-			
-			<img src="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" class="img100" />
 			<!--
+			<img src="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" class="img100" />
 			<img src="https://user-images.githubusercontent.com/66043576/83098861-b2265400-a0e6-11ea-9be1-d5a46e23f7dc.JPG" class="img100" />
 			<img src="https://user-images.githubusercontent.com/66043576/83098862-b2beea80-a0e6-11ea-960e-5280b7d01ad4.JPG" class="img100" />
 			<img src="https://user-images.githubusercontent.com/66043576/83098892-bf434300-a0e6-11ea-88a1-5c166b3211c5.JPG" class="img100" />
 			-->
 		</div>
 		<div class="slide">
-	      		<!--
-			<img id="back" src="https://user-images.githubusercontent.com/66043576/83115419-4c959000-a105-11ea-9665-f1b61a7aa108.png" alt="" width="40">
+	      		<img id="back" src="https://user-images.githubusercontent.com/66043576/83115419-4c959000-a105-11ea-9665-f1b61a7aa108.png" alt="" width="40">
 	      		<ul>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" alt="" width="500" height="400"></li>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098861-b2265400-a0e6-11ea-9be1-d5a46e23f7dc.JPG" alt="" width="500" height="400"></li>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098862-b2beea80-a0e6-11ea-960e-5280b7d01ad4.JPG" alt="" width="500" height="400"></li>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098892-bf434300-a0e6-11ea-88a1-5c166b3211c5.JPG" alt="" width="500" height="400"></li>
+				<li><img src="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" alt="" width="400"></li>
+				<li><img src="https://user-images.githubusercontent.com/66043576/83098861-b2265400-a0e6-11ea-9be1-d5a46e23f7dc.JPG" alt="" width="400"></li>
+				<li><img src="https://user-images.githubusercontent.com/66043576/83098862-b2beea80-a0e6-11ea-960e-5280b7d01ad4.JPG" alt="" width="400"></li>
+				<li><img src="https://user-images.githubusercontent.com/66043576/83098892-bf434300-a0e6-11ea-88a1-5c166b3211c5.JPG" alt="" width="400"></li>
 	     		</ul>
 	      		<img id="next" src="https://user-images.githubusercontent.com/66043576/83115425-4dc6bd00-a105-11ea-8e7d-7b8e7a2919c4.png" alt="" width="40">
-			-->
 	    	</div>
 		<div class="content_wrap">
 			<h1><img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack/110/Party-Poppers-128.png" alt="icon finder free icon" />인계동 집들이에 초대합니다!<img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack/110/Party-Poppers-128.png" alt="icon finder free icon" /></h1>
@@ -346,7 +343,7 @@ body {
 	      	function back() {
 			if(1<img_position){
 		  		imgs.animate({
-		    		left:'+=500px'
+		    		left:'+=400px'
 		  		});
 		  	img_position--;
 			}
@@ -354,7 +351,7 @@ body {
 	      	function next() {
 			if(img_count>img_position){
 				imgs.animate({
-				left:'-=500px'
+				left:'-=400px'
 				});
 			img_position++;
 			}
