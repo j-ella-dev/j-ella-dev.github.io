@@ -1,388 +1,217 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>* Home Party *</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
-
-<meta property="og:site_name" content="Kumyeong's New House" />
-<meta property="og:title" content="Welcome to Kumyeong's NEW House." />
-<meta property="og:description" content="2020. 05. 30. SAT, Let's Party!" />
-<meta property="og:image" content="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" />
-<meta property="og:image" content="https://user-images.githubusercontent.com/66043576/83098892-bf434300-a0e6-11ea-88a1-5c166b3211c5.JPG" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="j-ella-dev.github.io" />
-
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
-<style>
-* {
-	margin: 0;
-	padding: 0;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
-	-webkit-text-size-adjust: 100%;
-}
-
-html,body {
-	height: 100%;
-}
-
-body {
-	background-color: #eee;
-}
-
-#wrap {
-	max-width: 500px;
-	margin: 0 auto;
-	background-color: #fff;
-	height: auto;
-}
-
-.img100 {
-	max-width: 100%;
-	width: auto !important;
-	width: 100%;
-}
-
-#autoplay, .slide_wrap {
-	position:relative;
-	width:100%;
-	overflow:hidden;
-}
-
-.content_wrap {
-	font-size: 14px;
-	text-align: center;
-	padding-top: 15px;
-	margin: 0 15px;
-	color: #8d968c;
-	line-height: 20px;
-}
-
-.content_wrap h1 {
-	font-size: 15px;
-	font-weight: bold;
-	text-align: center;
-	padding-bottom: 15px;
-	color: #50a27f;
-}
-
-.content_wrap h1 img {
-	height: 40px;
-	vertical-align: middle;
-}
-
-.contact_wrap {
-	text-align: center;
-	padding-top: 15px;
-}
-
-.contact_wrap a {
-	font-size: 15px;
-	color: #2f302c;
-	font-weight: bold;
-	text-decoration: none;
-	display: inline-block;
-	padding: 10px;
-	min-width: 40px;
-	border-radius: 5px;
-}
-
-.contact_wrap a.bg1 {
-	background-color: #bbedc8;
-}
-
-.contact_wrap a.bg2 {
-	background-color: #9bddbe;
-}
-
-.contact_wrap a.bg3 {
-	background-color: #ccf2cb;
-}
-
-.contact_wrap img {
-	height: 15px;
-	padding-right: 5px;
-	vertical-align: middle;
-	position: relative;
-	top: -2px;
-}
-
-.date_wrap {
-	margin: 0 15px;
-	padding: 20px 0 0 0;
-	text-align: left;
-	font-size: 13px;
-}
-
-.date_wrap img {
-	height: 15px;
-	vertical-align: middle;
-	position: relative;
-	top: -2px;
-	padding-right: 5px;
-}
-
-.addr_wrap {
-	margin: 0 15px;
-	padding: 10px 0;
-	text-align: left;
-	font-size: 13px;
-}
-
-.addr_wrap img {
-	height: 15px;
-	vertical-align: middle;
-	position: relative;
-	top: -2px;
-	padding-right: 5px;
-}
-
-.map_wrap {
-	margin: 0 15px;
-	height: 200px;
-	background-color: #ddd;
-	text-align: center;
-	font-size: 14px;
-}
-
-.tras_wrap {
-	margin: 0 15px;
-	font-size: 14px;
-	padding-bottom: 20px;
-}
-
-.tras_wrap div {
-	padding-top: 10px;
-}
-
-.tras_wrap div.what {
-	color: #888;
-}
-
-.tras_wrap div.is {
-	color: #8d968c;
-	font-weight: bold;
-	margin: 0 20px;
-}
-
-.tras_wrap img {
-	height: 14px;
-	vertical-align: middle;
-	position: relative;
-	top: -3px;
-	padding-right: 5px;
-}
-.copy {
-	font-size:12px;
-	color:#888;
-	text-align:center;
-	padding-top:15px;
-	padding-bottom:15px;
-}
-.slick-prev,.slick-next {
-	display:none !important;
-}
-.slide{
-	width: 400px;
-	height: 300px;
-	overflow: hidden;
-	position: relative;
-	margin: 0 auto;
-}
-.slide ul{
-	width: 1600px;
-	position: absolute;
-	top:0;
-	left:0;
-	font-size: 0;
-}
-.slide ul li{
-	display: inline-block;
-}
-#back{
-	position: absolute;
-	top: 150px;
-	left: 0;
-	cursor: pointer;
-	z-index: 1;
-}
-#next{
-	position: absolute;
-	top: 150px;
-	right: 0;
-	cursor: pointer;
-	z-index: 1;
-	-moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
-}
-</style>
-</head>
-<body>
-	<div id="wrap">
-		<div class="slide_wrap">
-			
-			<div id="autoplay" style="display:none;">
-				<!-- //이미지 추가 -->
-				<!--<img src="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" class="img100" />
-				<img src="https://user-images.githubusercontent.com/66043576/83098861-b2265400-a0e6-11ea-9be1-d5a46e23f7dc.JPG" class="img100" />
-				<img src="https://user-images.githubusercontent.com/66043576/83098862-b2beea80-a0e6-11ea-960e-5280b7d01ad4.JPG" class="img100" />
-				<img src="https://user-images.githubusercontent.com/66043576/83098892-bf434300-a0e6-11ea-88a1-5c166b3211c5.JPG" class="img100" />
-				-->
-			</div>
-			<!--
-			<img src="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" class="img100" />
-			<img src="https://user-images.githubusercontent.com/66043576/83098861-b2265400-a0e6-11ea-9be1-d5a46e23f7dc.JPG" class="img100" />
-			<img src="https://user-images.githubusercontent.com/66043576/83098862-b2beea80-a0e6-11ea-960e-5280b7d01ad4.JPG" class="img100" />
-			<img src="https://user-images.githubusercontent.com/66043576/83098892-bf434300-a0e6-11ea-88a1-5c166b3211c5.JPG" class="img100" />
-			-->
-		</div>
-		<div class="slide">
-	      		<img id="back" src="https://user-images.githubusercontent.com/66043576/83115419-4c959000-a105-11ea-9665-f1b61a7aa108.png" alt="" width="40">
-	      		<ul>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098852-ae92cd00-a0e6-11ea-8836-96fffa7bb9ea.jpg" alt="" width="400"></li>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098861-b2265400-a0e6-11ea-9be1-d5a46e23f7dc.JPG" alt="" width="400"></li>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098862-b2beea80-a0e6-11ea-960e-5280b7d01ad4.JPG" alt="" width="400"></li>
-				<li><img src="https://user-images.githubusercontent.com/66043576/83098892-bf434300-a0e6-11ea-88a1-5c166b3211c5.JPG" alt="" width="400"></li>
-	     		</ul>
-	      		<img id="next" src="https://user-images.githubusercontent.com/66043576/83115425-4dc6bd00-a105-11ea-8e7d-7b8e7a2919c4.png" alt="" width="40">
-	    	</div>
-		<div class="content_wrap">
-			<h1><img src="https://user-images.githubusercontent.com/66043576/83210899-d2155080-a196-11ea-89f4-182d8962a72b.png" alt="icon finder free icon" /> 인계동 집들이에 초대합니다! <img src="https://user-images.githubusercontent.com/66043576/83210899-d2155080-a196-11ea-89f4-182d8962a72b.png" alt="icon finder free icon" /></h1>
-			금영이의 새 보금자리에<br />
-			미인팸 멤버 여러분을 초대합니다!<br /><br />
-			여러분의 성화에 힘입어 제가 드디어 전세로 이사를 했습니다!<br />
-			비록 작은 집이지만 오셔서 저의 첫 전세집을 축하해주시기 바랍니다^^<br />
-			저녁은 근처 식당 '월화주가'로 예정되어 있습니다.<br />
-			(오후 6시) (장소, 시간 변경 가능)<br />
-			2차는 집에서 할 예정이며 각종 주류 구비되어 있습니다.<br />
-			오시는 길은 하단을 참고하시기 바랍니다.<br />
-			원하는 음식이 있다면 미리 주문 가능하니 언제든 연락주세요 :)<br /><br />
-			P.S. 참석이 불가피한 멤버는 언제든지 원격집들이가 가능하니<br />
-			언제든 FaceTime 혹은 카카오톡 영상통화로 접속바랍니다.<br /><br />
-			<h1>재밌게 놀아봅시다 여러분 : )</h1>
-			<h1><img src="https://user-images.githubusercontent.com/66043576/83210796-bad66300-a196-11ea-8162-9d53b1302447.png" alt="icon finder free icon" />  <img src="https://user-images.githubusercontent.com/66043576/83210982-e3f6f380-a196-11ea-8ea6-1e22bf2f14ce.png" alt="icon finder free icon" /></h1>
-		</div>
-		<div class="contact_wrap">
-			<a href="tel:010-9194-0794" class="bg1"><img src="https://user-images.githubusercontent.com/66043576/83211140-4fd95c00-a197-11ea-9374-0b5fe4599b3c.png" alt="tel">Phone</a>
-			<a href="https://www.instagram.com/jkumyeong/" class="bg2"><img src="https://user-images.githubusercontent.com/66043576/83211143-510a8900-a197-11ea-9352-7f6dbd00e7a9.png" alt="website">Instagram</a>
-			<a href="mailto:j.kumyeong@gmail.com" class="bg3"><img src="https://user-images.githubusercontent.com/66043576/83211144-510a8900-a197-11ea-8e04-3a9846bbc711.png" alt="email" />Email</a>
-		</div>
-		<div class="date_wrap">
-			<span><img src="https://user-images.githubusercontent.com/66043576/83211155-5667d380-a197-11ea-8957-83768b3498be.png" alt="time" />초대일시 : <strong>2020년 05월 30일 오후 4시</strong></span>
-		</div>
-		<div class="addr_wrap">
-			<span><img src="https://user-images.githubusercontent.com/66043576/83211155-5667d380-a197-11ea-8957-83768b3498be.png" alt="place" />초대장소 : <strong>홈파티</strong> | 경기도 수원시 팔달구 인계로 108번길 9, 글로벌하임</span>
-		</div>
-		<div class="map_wrap" id="map">
-		</div>
-		<div class="tras_wrap">
-			<div>
-				<div class="what"><img src="https://user-images.githubusercontent.com/66043576/83211155-5667d380-a197-11ea-8957-83768b3498be.png" alt="metro" />Subway</div>
-				<div class="is">(분당선)수원시청역 6번 출구 (픽업가능(도보))</div>
-			</div>
-			<div>
-				<div class="what"><img src="https://user-images.githubusercontent.com/66043576/83211155-5667d380-a197-11ea-8957-83768b3498be.png" alt="metro" />Bus</div>
-				<div class="is">인계동행정복지센터.KBS수원센터 정류장 2-1, 9, 9-1, 98</div>
-			</div>
-		</div>
-		<div class="copy">
-			© Copyright 2020, J.Ella
-		</div>
-	</div>
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyByXc9j46SRp7VO0NmxglzS4CgpvoZxsug"></script>
-	
-	<script>
-	var latlng = "37.267439, 127.029478";
-
-	function initMap() {
-		if (latlng.length <= 0)
-			return false;
-		arr = latlng.split(",");
-		if (arr.length <= 1)
-			return false;
-
-		var myLatLng = {
-			lat : parseFloat($.trim(arr[0])),
-			lng : parseFloat($.trim(arr[1]))
-		};
-		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom : 17,
-			center : myLatLng
-		});
-		var arr = [];
-
-		new google.maps.Marker({
-			position : myLatLng,
-			map : map
-		});
-	}
-	$(function(e) {
-		initMap();
-		
-		var imgs;
-	      	var img_count;
-	      	var img_position = 1;
-
-	      	imgs = $(".slide ul");
-	      	img_count = imgs.children().length;
-
-	      	//버튼을 클릭했을 때 함수 실행
-	      	$('#back').click(function () {
-			back();
-	      	});
-	      	$('#next').click(function () {
-			next();
-	      	});
-
-	      	function back() {
-			if(1<img_position){
-		  		imgs.animate({
-		    		left:'+=400px'
-		  		});
-		  	img_position--;
-			}
-	      	}
-	      	function next() {
-			if(img_count>img_position){
-				imgs.animate({
-				left:'-=400px'
-				});
-			img_position++;
-			}
-	      	}
-		
-		var targetEle = $("#autoplay");
-		targetEle.find("img").css("cssText" , "width:" + targetEle.width() + "px !important;");
-		targetEle.slick({
-			slidesToShow : 1,
-			slidesToScroll : 1,
-			autoplay : true,
-			autoplaySpeed : 2000,
-			dots: false,
-		  	infinite: true,
-		  	variableWidth: true
-		});
-		targetEle.css({"display" : "block"});
-		var tmpHeight = 0;
-		targetEle.find("img").each(function(k, v) {
-			var _this = $(this);
-			if( tmpHeight == 0 || tmpHeight > _this.height() ) {
-				tmpHeight = _this.height();
-			}
-		});
-		$(".slide_wrap").height(tmpHeight);
-	});
-	</script>
-
-</body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>* Home Party *</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">초대장</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">BeautyFam</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Images</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <h1 class="text-uppercase text-white font-weight-bold">집들이에 초대합니다.</h1>
+                        <hr class="divider my-4" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 font-weight-light mb-5">금영이의 새 보금자리에 미인팸 멤버 여러분을 초대합니다!</p>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">초대장보기</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">혼자와도, 둘이와도 재밌는 집들이 :D</h2>
+                        <hr class="divider light my-4" />
+                        <p class="text-white-50 mb-4">일시 : 2020년 5월 30일 (토) 늦은 오후 5시
+                        <br />장소 : 홈파티 | 경기도 수원시 팔달구 인계로108번길 9<br />
+                        <br />혼자 산지 어언 3년이 넘은 금영이가 여러분들의 응원에 힘 입어
+                        <br />드디어! 전세집으로 이사를 했습니다!
+                        <br />* 신축 건물의 냄새를 없애기 위한 따뜻한 캔들 옵션 *
+                        <br />* 각종 주류 (소주, 맥주, 막걸리, 양주) 옵션 *
+                        <br />* PlayStation4 (Just Dance 2020, PES 2020 등) 신나는 게임 옵션 *
+                        <br />* UHD 화면으로 Netflix 감상 가능한 TV 옵션*
+                        <br />완벽한 음주가무를 위한 환경이 마련되어 있으니, 와서 재밌게 즐기시기 바랍니다.<br />
+                        <br />p.s. 참석 못 하는 멤버는 원격집들이 에브리타임 가능.
+                        <br />#집들이선물NO필요 #무일푼가능
+                        </p>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">미인팸 추억여행</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <h2 class="text-center mt-0">미인팸의 아름다운 추억을 구경하세요.</h2>
+                <!--
+                <hr class="divider my-4" />
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Sturdy Themes</h3>
+                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Up to Date</h3>
+                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Ready to Publish</h3>
+                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Made with Love</h3>
+                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+        <!-- Portfolio-->
+        <div id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg"
+                            ><img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50"></div>
+                                <div class="project-name">싱가포르여행</div>
+                            </div></a
+                        >
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg"
+                            ><img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50"></div>
+                                <div class="project-name">싱가포르여행</div>
+                            </div></a
+                        >
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg"
+                            ><img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50"></div>
+                                <div class="project-name">발리여행</div>
+                            </div></a
+                        >
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg"
+                            ><img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50"></div>
+                                <div class="project-name">발리여행</div>
+                            </div></a
+                        >
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg"
+                            ><img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50"></div>
+                                <div class="project-name">울산여행</div>
+                            </div></a
+                        >
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg"
+                            ><img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="" />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50"></div>
+                                <div class="project-name">대전여행</div>
+                            </div></a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call to action-->
+        <section class="page-section bg-dark text-white">
+            <div class="container text-center">
+                <h2 class="mb-4">작지만 예쁜 금영이 집으로 놀러오세요!</h2>
+                <a class="btn btn-light btn-xl" href="https://map.kakao.com/link/map/인계로108번길9,37.267439,127.029478">지도보러가기</a>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">연락처는 아래에.</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-muted mb-5">집들이 당일 수원시청역 도착 시 픽업을 원하시는 분들은 아래의 연락처로 연락바랍니다.<br />(당일 예약 가능)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                        <div>+82 (010) 9194-0794</div>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i
+                        ><!-- Make sure to change the email address in BOTH the anchor text and the link target below!--><a class="d-block" href="mailto:j.kumyeong@gmail">j.kumyeong@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - J.Ella</div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
